@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Header = ( { text, bgColor, textColor} ) => {
@@ -10,9 +11,11 @@ const Header = ( { text, bgColor, textColor} ) => {
     return (
         <header style={headerStyles}>
             <div className="container">
-                <h2>{text}</h2>
+                <h2>
+                    <Link to='/' className='text-link'>{text}</Link>
+                </h2>
             </div>
-        </header>
+        </header> 
     )
 }
 
